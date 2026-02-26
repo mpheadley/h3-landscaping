@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — H3 Landscaping and Management | Heflin, AL</title>
+  <meta name="description" content="Call or request a free estimate from H3 Landscaping and Management in Heflin, AL. Fast response, no obligation. (256) 676-8631. Licensed and insured.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-page {
+      padding: 5rem 1.5rem 6rem;
+      background: var(--off-white);
+    }
+
+    .contact-page-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-left h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--navy-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-left > p {
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-block {
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-block h3 {
+      font-size: 0.7rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .big-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--navy-deep);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .big-phone:hover { color: var(--blue); }
+
+    .big-phone-sub {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-top: 0.25rem;
+    }
+
+    .estimate-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(90,138,46,0.08);
+      border: 1px solid rgba(90,138,46,0.25);
+      color: var(--blue);
+      font-size: 0.8rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      margin-top: 0.75rem;
+    }
+
+    .estimate-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: var(--blue);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @media (max-width: 900px) {
+      .contact-page-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 18h18M6 18V9l6-6 6 6v9M10 18v-5h4v5" stroke="none" fill="white"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="name">H3 Landscaping &amp; Management</span>
+        <span class="tagline">Heflin, AL &middot; East AL &amp; West GA</span>
+      </div>
+    </a>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="tel:2566768631" class="nav-cta">&#128222; Call Now</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Reach Us</div>
+    <h1>Get a Free Estimate</h1>
+    <p>Call Mack directly or fill out the form — we'll get back to you quickly, come look at the job, and give you a straight quote with no pressure and no obligation.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT PAGE ── -->
+<section class="contact-page">
+  <div class="contact-page-inner">
+
+    <!-- Left: Contact Info -->
+    <div class="contact-left">
+      <div class="section-label">Contact Info</div>
+      <h2>Let's Talk</h2>
+      <p>The fastest way to reach us is a phone call. For non-urgent requests, fill out the form and we'll get back to you promptly.</p>
+
+      <div class="contact-block">
+        <h3>Phone</h3>
+        <a href="tel:2566768631" class="big-phone">&#128222; (256) 676-8631</a>
+        <p class="big-phone-sub">Call or text — we respond fast</p>
+        <div class="estimate-badge">Free estimates — no obligation</div>
+      </div>
+
+      <div class="contact-block">
+        <h3>Email</h3>
+        <div class="contact-detail" style="margin-bottom: 0;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="text">
+            <span class="label">Email Us</span>
+            <a href="mailto:h3landmanagement@gmail.com">h3landmanagement@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <h3>Location &amp; Hours</h3>
+        <table class="hours-table">
+          <tbody>
+            <tr>
+              <td>Monday &ndash; Friday</td>
+              <td>7:00 am &ndash; 6:00 pm</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>8:00 am &ndash; 4:00 pm</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Closed</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="hours-emergency">
+          &#127807; Based in Heflin, AL 36264 &middot; We respond to estimate requests promptly
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <h3>Service Area</h3>
+        <div class="contact-detail" style="margin-bottom: 0;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="text">
+            <span class="label">Coverage</span>
+            <span>East Alabama and West Georgia — including Heflin, Anniston, Oxford, Jacksonville, Talladega, Lincoln, Wedowee, Carrollton, Tallapoosa, and surrounding areas. Call to confirm your location.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <h3>License Info</h3>
+        <p style="font-size: 0.9rem; color: var(--gray); line-height: 1.6;">H3 Landscaping and Management is fully licensed and insured in the state of Alabama. Ask for documentation — we're happy to provide it.</p>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="contact-form">
+      <h3>Request a Free Estimate</h3>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(256) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Property Address</label>
+          <input type="text" id="address" name="address" placeholder="123 Main St, Heflin, AL">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option>Land Management</option>
+            <option>Grading &amp; Excavation</option>
+            <option>Landscaping &amp; Design</option>
+            <option>Hardscapes (Patios, Walkways, Walls)</option>
+            <option>Land Clearing &amp; Removal</option>
+            <option>Sod Installation</option>
+            <option>Dirt Work &amp; Utilities</option>
+            <option>Brush Mulching</option>
+            <option>Multiple Services / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="timeline">When Do You Need This Done?</label>
+          <select id="timeline" name="timeline">
+            <option value="">Select...</option>
+            <option>As Soon As Possible</option>
+            <option>Within 1&ndash;2 Weeks</option>
+            <option>This Month</option>
+            <option>Planning Ahead</option>
+            <option>Just Getting a Quote</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Describe the Job</label>
+          <textarea id="message" name="message" placeholder="Tell us about your property — acreage, what you need done, any access considerations, and anything else that would help us prepare..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Estimate Request &rarr;</button>
+        <p style="font-size: 0.8rem; color: var(--gray); margin-top: 1rem; text-align: center; line-height: 1.5;">We respond to all requests promptly. For faster service, call or text us at <a href="tel:2566768631" style="color: var(--blue);">(256) 676-8631</a>.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ── -->
+<section style="background: var(--navy-deep); padding: 3rem 1.5rem;">
+  <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
+    <div>
+      <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">8+</div>
+      <div style="font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Services Offered</div>
+    </div>
+    <div>
+      <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">AL&amp;GA</div>
+      <div style="font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Service Area</div>
+    </div>
+    <div>
+      <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">100%</div>
+      <div style="font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Satisfaction Guaranteed</div>
+    </div>
+    <div>
+      <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">Free</div>
+      <div style="font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Estimates</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 18h18M6 18V9l6-6 6 6v9M10 18v-5h4v5" stroke="none" fill="white"/>
+            </svg>
+          </div>
+          <span class="name">H3 Landscaping &amp; Management</span>
+        </a>
+        <p>East Alabama's trusted land management company. Based in Heflin, AL. Licensed, insured, and ready to work.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Google">G</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Land Management</a>
+        <a href="services.html">Grading &amp; Excavation</a>
+        <a href="services.html">Hardscapes</a>
+        <a href="services.html">Land Clearing</a>
+        <a href="services.html">Sod Installation</a>
+        <a href="services.html">Brush Mulching</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><strong>Phone:</strong> <a href="tel:2566768631">(256) 676-8631</a></p>
+        <p><strong>Email:</strong> <a href="mailto:h3landmanagement@gmail.com">h3landmanagement<wbr>@gmail.com</a></p>
+        <p style="margin-top:0.75rem"><strong>Location:</strong><br>Heflin, AL 36264</p>
+        <p style="margin-top:0.5rem"><strong>Service Area:</strong><br>East AL &amp; West GA</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 H3 Landscaping and Management. All rights reserved. Heflin, AL.</span>
+      <span>Licensed &middot; Insured</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:2566768631" class="sticky-call" aria-label="Call H3 Landscaping and Management">
+  <span class="phone-icon">&#128222;</span>
+  (256) 676-8631
+</a>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', function() {
+    nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+</script>
+</body>
+</html>
