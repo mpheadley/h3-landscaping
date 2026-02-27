@@ -201,6 +201,18 @@ nav a.active { color: var(--blue-light); }
   overflow: hidden;
 }
 
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -478,10 +490,31 @@ nav a.active { color: var(--blue-light); }
 .stakes {
   background: linear-gradient(180deg, #0e1a08 0%, var(--navy-deep) 100%);
   padding: 5rem 1.5rem;
-  text-align: center;
 }
 
-.stakes-inner { max-width: 760px; margin: 0 auto; }
+.stakes-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+
+.stakes-text { max-width: 620px; }
+
+.stakes-image-wrap {
+  flex-shrink: 0;
+}
+
+.stakes-image-wrap img {
+  width: 320px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 3px solid rgba(255,255,255,0.08);
+}
 
 .stakes .section-label { color: var(--blue-light); }
 
@@ -1128,21 +1161,13 @@ textarea { resize: vertical; min-height: 110px; }
   border-top: 4px solid var(--blue);
 }
 
-.owner-placeholder {
+.owner-photo {
   width: 100%;
-  height: 260px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 320px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
   margin-bottom: 1.5rem;
-}
-
-.owner-placeholder svg {
-  width: 80px; height: 80px;
-  stroke: rgba(255,255,255,0.25);
-  fill: none;
-  stroke-width: 1;
 }
 
 .owner-card h3 {
@@ -1506,6 +1531,8 @@ footer {
   .emergency-inner { flex-direction: column; text-align: center; }
   .reviews-grid { grid-template-columns: 1fr; }
   .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .stakes-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .stakes-image-wrap img { width: 100%; height: 280px; }
 }
 
 @media (max-width: 600px) {
