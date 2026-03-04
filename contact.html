@@ -1,14 +1,34 @@
+<!-- Built by Headley Web & SEO | headleyweb.com | Web Design & SEO for local businesses -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Headley Web & SEO | headleyweb.com">
   <title>Contact Us — H3 Landscaping and Management | Heflin, AL</title>
   <meta name="description" content="Call or request a free estimate from H3 Landscaping and Management in Heflin, AL. Fast response, no obligation. (256) 676-8631. Licensed and insured.">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="H3 Landscaping and Management">
+  <meta property="og:title" content="Contact Us — H3 Landscaping and Management | Heflin, AL">
+  <meta property="og:description" content="Call or request a free estimate from H3 Landscaping and Management in Heflin, AL. Fast response, no obligation. (256) 676-8631. Licensed and insured.">
+  <meta property="og:image" content="https://YOURDOMAIN.com/images/h3squarelogo.webp">
+  <meta property="og:url" content="https://YOURDOMAIN.com/contact.html">
+  <meta property="og:locale" content="en_US">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us — H3 Landscaping and Management | Heflin, AL">
+  <meta name="twitter:description" content="Call or request a free estimate from H3 Landscaping and Management in Heflin, AL. Fast response, no obligation. (256) 676-8631. Licensed and insured.">
+  <meta name="twitter:image" content="https://YOURDOMAIN.com/images/h3squarelogo.webp">
+  <link rel="author" href="https://headleyweb.com">
+  <link rel="canonical" href="https://YOURDOMAIN.com/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="favicon-180.png">
   <style>
     .contact-page {
       padding: 5rem 1.5rem 6rem;
@@ -106,11 +126,7 @@
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo-wrap">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M3 18h18M6 18V9l6-6 6 6v9M10 18v-5h4v5" stroke="none" fill="white"/>
-        </svg>
-      </div>
+      <img src="images/h3squarelogo.webp" alt="H3 Landscaping and Management logo" width="47" height="42" class="logo-icon" loading="eager">
       <div class="logo-text">
         <span class="name">H3 Landscaping &amp; Management</span>
         <span class="tagline">Heflin, AL &middot; East AL &amp; West GA</span>
@@ -213,7 +229,10 @@
     <!-- Right: Form -->
     <div class="contact-form">
       <h3>Request a Free Estimate</h3>
-      <form>
+      <!-- Formspree: sign up free at formspree.io, create a form, replace XXXXXXXX with your form ID -->
+      <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <input type="hidden" name="_subject" value="New Estimate Request — H3 Landscaping">
+        <input type="hidden" name="_replyto" value="">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First Name</label>
@@ -280,7 +299,7 @@
 <section style="background: var(--navy-deep); padding: 3rem 1.5rem;">
   <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
     <div>
-      <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">8+</div>
+      <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">6+</div>
       <div style="font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Services Offered</div>
     </div>
     <div>
@@ -308,7 +327,7 @@
         </a>
         <p>East Alabama's trusted land management company. Based in Heflin, AL. Licensed, insured, and ready to work.</p>
         <div class="social-links">
-          <a href="#" aria-label="Facebook">f</a>
+          <a href="https://www.facebook.com/p/H3-Landscaping-And-Management-61557367135249/" aria-label="Facebook" target="_blank" rel="noopener">f</a>
           <a href="#" aria-label="Google">G</a>
         </div>
       </div>
@@ -319,6 +338,7 @@
         <a href="services.html">Hardscapes</a>
         <a href="services.html">Land Clearing</a>
         <a href="services.html">Sod Installation</a>
+        <a href="services.html">Dirt Work</a>
         <a href="services.html">Brush Mulching</a>
       </div>
       <div class="footer-col">
@@ -332,6 +352,7 @@
     <div class="footer-bottom">
       <span>&copy; 2026 H3 Landscaping and Management. All rights reserved. Heflin, AL.</span>
       <span>Licensed &middot; Insured</span>
+      <span>Built by <a href="https://headleyweb.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Local SEO &amp; Web Design</a></span>
     </div>
   </div>
 </footer>

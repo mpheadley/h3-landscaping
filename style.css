@@ -57,19 +57,10 @@ header {
 }
 
 .logo-icon {
-  width: 42px; height: 42px;
-  background: var(--blue);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 42px;
+  width: auto;
   flex-shrink: 0;
-}
-
-.logo-icon svg {
-  width: 22px; height: 22px;
-  fill: var(--white);
-  stroke: none;
+  border-radius: 6px;
 }
 
 .logo-text {
@@ -193,7 +184,7 @@ nav a.active { color: var(--blue-light); }
 /* ── HERO (Home Page) ── */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, rgba(90,138,46,0.2) 100%);
+  background: var(--navy-deep);
   display: flex;
   align-items: center;
   padding: 72px 1.5rem 0;
@@ -208,7 +199,7 @@ nav a.active { color: var(--blue-light); }
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
-  opacity: 0.12;
+  opacity: 0.52;
   z-index: 0;
   pointer-events: none;
 }
@@ -219,15 +210,16 @@ nav a.active { color: var(--blue-light); }
   bottom: 0; left: 0; right: 0;
   height: 120px;
   background: linear-gradient(to top, var(--white), transparent);
+  z-index: 1;
 }
 
 .hero::after {
   content: '';
   position: absolute;
-  top: 30%; right: -5%;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(90,138,46,0.15) 0%, transparent 70%);
+  inset: 0;
+  background: linear-gradient(to right, rgba(10,20,10,0.55) 0%, rgba(10,20,10,0.2) 60%, transparent 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-inner {
@@ -278,6 +270,7 @@ nav a.active { color: var(--blue-light); }
   color: var(--white);
   line-height: 1.0;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.6);
 }
 
 .hero h1 span {
@@ -291,6 +284,7 @@ nav a.active { color: var(--blue-light); }
   margin: 1.25rem 0 2rem;
   max-width: 480px;
   line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 
 .hero-actions {
@@ -345,12 +339,16 @@ nav a.active { color: var(--blue-light); }
 
 .cred-rating { margin-bottom: 1.5rem; }
 
-.cred-stars {
-  color: #FBBC04;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
+.cred-fb-icon {
+  color: #1877F2;
+  font-size: 1.4rem;
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.cred-fb-icon svg {
+  width: 40px;
+  height: 40px;
 }
 
 .cred-rating-text {
@@ -667,6 +665,7 @@ nav a.active { color: var(--blue-light); }
   background: var(--white);
   padding: 2.5rem;
   border-left: 4px solid var(--blue);
+  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -692,6 +691,25 @@ nav a.active { color: var(--blue-light); }
 }
 
 .service-full-card .service-list { gap: 0.4rem; }
+
+/* Service card photos — negative-margin bleed to card edges */
+.service-card-photo {
+  display: block;
+  width: calc(100% + 6rem);
+  margin: -3rem -3rem 1.5rem;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-full-photo {
+  display: block;
+  width: calc(100% + 5rem);
+  margin: -2.5rem -2.5rem 1.75rem;
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+}
 
 /* ── HOW IT WORKS ── */
 .how-it-works {
