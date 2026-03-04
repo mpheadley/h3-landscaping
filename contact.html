@@ -148,9 +148,9 @@
 <!-- ── PAGE HERO ── -->
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="section-label">Reach Us</div>
-    <h1>Get a Free Estimate</h1>
-    <p>Call Mack directly or fill out the form — we'll get back to you quickly, come look at the job, and give you a straight quote with no pressure and no obligation.</p>
+    <div class="section-label animate-hero" style="--hero-delay:0.1s">Reach Us</div>
+    <h1 class="animate-hero" style="--hero-delay:0.25s">Get a Free Estimate</h1>
+    <p class="animate-hero" style="--hero-delay:0.4s">Call Mack directly or fill out the form — we'll get back to you quickly, come look at the job, and give you a straight quote with no pressure and no obligation.</p>
   </div>
 </section>
 
@@ -159,7 +159,7 @@
   <div class="contact-page-inner">
 
     <!-- Left: Contact Info -->
-    <div class="contact-left">
+    <div class="contact-left js-reveal">
       <div class="section-label">Contact Info</div>
       <h2>Let's Talk</h2>
       <p>The fastest way to reach us is a phone call. For non-urgent requests, fill out the form and we'll get back to you promptly.</p>
@@ -227,7 +227,7 @@
     </div>
 
     <!-- Right: Form -->
-    <div class="contact-form">
+    <div class="contact-form js-reveal reveal-delay-1">
       <h3>Request a Free Estimate</h3>
       <!-- Formspree: sign up free at formspree.io, create a form, replace XXXXXXXX with your form ID -->
       <form action="https://formspree.io/f/XXXXXXXX" method="POST">
@@ -297,7 +297,7 @@
 
 <!-- ── TRUST STRIP ── -->
 <section style="background: var(--navy-deep); padding: 3rem 1.5rem;">
-  <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
+  <div class="js-reveal" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
     <div>
       <div style="font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--blue-light);">6+</div>
       <div style="font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Services Offered</div>
@@ -375,6 +375,21 @@
   }, { passive: true });
 
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const reveals = document.querySelectorAll('.js-reveal');
+  if (reveals.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(function(el) { observer.observe(el); });
+  } else {
+    reveals.forEach(function(el) { el.classList.add('visible'); });
+  }
 </script>
 </body>
 </html>
