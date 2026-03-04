@@ -314,7 +314,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 H3 Landscaping and Management. All rights reserved. Heflin, AL.</span>
+      <span>&copy; <span id="year"></span> H3 Landscaping and Management. All rights reserved. Heflin, AL.</span>
       <span>Licensed &middot; Insured</span>
       <span>Built by <a href="https://headleyweb.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Web Design East Alabama</a></span>
     </div>
@@ -348,6 +348,12 @@
   } else {
     reveals.forEach(function(el) { el.classList.add('visible'); });
   }
+
+  window.addEventListener('scroll', function () {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

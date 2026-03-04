@@ -49,10 +49,22 @@
       "addressCountry": "US"
     },
     "areaServed": [
-      "Heflin, AL", "Anniston, AL", "Oxford, AL", "Jacksonville, AL",
-      "Talladega, AL", "Lincoln, AL", "Wedowee, AL", "Hollis Crossroads, AL",
-      "Pell City, AL", "Birmingham, AL", "Carrollton, GA", "Tallapoosa, GA",
-      "Bremen, GA", "White Plains, AL"
+      { "@type": "City", "name": "Heflin",            "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Anniston",          "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Oxford",            "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Jacksonville",      "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Talladega",         "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Lincoln",           "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Wedowee",           "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Piedmont",          "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "White Plains",      "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Hollis Crossroads", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Pell City",         "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Birmingham",        "containedInPlace": { "@type": "State", "name": "Alabama" } },
+      { "@type": "City", "name": "Carrollton",        "containedInPlace": { "@type": "State", "name": "Georgia" } },
+      { "@type": "City", "name": "Bremen",            "containedInPlace": { "@type": "State", "name": "Georgia" } },
+      { "@type": "City", "name": "Tallapoosa",        "containedInPlace": { "@type": "State", "name": "Georgia" } },
+      { "@type": "City", "name": "Cedartown",         "containedInPlace": { "@type": "State", "name": "Georgia" } }
     ],
     "openingHoursSpecification": [
       {
@@ -529,7 +541,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 H3 Landscaping and Management. All rights reserved. Heflin, AL.</span>
+      <span>&copy; <span id="year"></span> H3 Landscaping and Management. All rights reserved. Heflin, AL.</span>
       <span>Licensed &middot; Insured</span>
       <span>Built by <a href="https://headleyweb.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Headley Web &amp; SEO</a></span>
     </div>
@@ -563,6 +575,12 @@
   } else {
     reveals.forEach(function(el) { el.classList.add('visible'); });
   }
+
+  window.addEventListener('scroll', function () {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
