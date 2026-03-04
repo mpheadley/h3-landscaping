@@ -339,6 +339,15 @@ nav a.active { color: var(--blue-light); }
 
 .cred-rating { margin-bottom: 1.5rem; }
 
+.cred-fb-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+.cred-fb-link:hover .cred-rating-text { text-decoration: underline; }
+
 .cred-fb-icon {
   color: #1877F2;
   font-size: 1.4rem;
